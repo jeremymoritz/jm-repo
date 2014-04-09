@@ -1,0 +1,38 @@
+<% include _par/header %>
+<body id="<%= id %>">
+  <% include _par/topper %>
+    <section class='main' id='index'>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <h2 class='text-center'><img src='_img/logo_700.png' alt='Jeremy Moritz' id='logo' class='img-responsive'></h2>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-8 col-md-6'>
+          <h3>Programmer, Web Developer, Software Engineer</h3>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <p><%= getAge(cuHireDate) %> years of experience.  Specializing in...</p>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-10 col-md-8 col-lg-6'>
+          <ul id='specialties'>
+            <% skills.forEach(function skillsList(s) { %>
+              <li><span class='spacer'><img src='_img/logo_<%= s.abbr %>_sm.png' alt='<%= s.name %> Logo'></span><label><%= s.name %></label></li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-6 col-md-6'>
+          <p>In addition to the skills listed above, I am also comfortable working with Less, AJAX, Objective C, Selenium, Mocha, Unix, Bash, JSON, XML, Flash, Facebook Developer API, and Scratch.
+          <p>To learn more <a href='about.php'>about</a> me or my work, check out some <a href='examples.php'>examples</a> of websites I've designed or <a href='contact.php'>contact</a> me for more information.</p>
+        </div>
+      </div>
+    </section>
+  <% include _par/footer %>
+</body>
+</html>

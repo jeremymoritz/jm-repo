@@ -1,0 +1,43 @@
+<% include _par/header %>
+<body id="<%= id %>">
+  <% include _par/topper %>
+  <article class='main'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <h2>About me...</h2>
+      </div>
+    </div>
+    <section class='row' id='personal'>
+      <div class='col-xs-12'>
+        <h3>Personal</h3>
+      </div>
+      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-8'>
+        <a href='http://www.MoritzFamily.com'><img src='_img/moritzfamily-2013.png' alt='' class='enlarge' title='Hover to Enlarge'></a>
+        <p>I am <%= getAge(myBirthday) %> years old.  I'm a committed Christian and a loving husband and father.  My wife Christine and I have been happily married for over <%= getAge(weddingDay) %> years, and we have 5 wonderful children ranging in age from <%= getAge(angelsBirthday) %> years old to <%= getAge(chasesBirthday) %>. <a href='http://www.MoritzFamily.com'>View my family website</a>.</p>
+      </div>
+    </section>
+    <section class='row' id='professional'>
+      <div class='col-xs-12'>
+        <h3>Professional</h3>
+      </div>
+      <div class='col-md-7 col-lg-8'>
+        <p>I have been working for a successful internet company called Cities Unlimited for <%= getAge(cuHireDate) %> years.  I started on the tech team and later became CEO of the company, a position I've held for over 5 years now.  My job affords me ample flexibility to do many things I enjoy including designing and building websites.</p>
+        <p id='specialties_para'>I do all of my website design with bare code (as opposed to programs like FrontPage or WordPress) which allows for maximum control and cleanliness in design.   My specialty is programming using
+        <%- skillWithLogo('javascript') %> and
+        <%- skillWithLogo('php') %> with
+        <%- skillWithLogo('mysql') %> database handling (providing a broad range of functionality to your website).  I most love to work in
+        <%- skillWithLogo('node') %> (this site, for example, is built in Node) with
+        <%- skillWithLogo('knockout') %> integration when possible. In addition to this, I am fluent in
+        <%- skillWithLogo('html5') %>
+        <%- skillWithLogo('css3') %> and
+        <%- skillWithLogo('jquery') %> I am also very skilled with
+        <%- skillWithLogo('photoshop') %>  I prefer
+        <%- skillWithLogo('git') %> for version control, and my current sites are built with the Twitter
+        <%- skillWithLogo('bootstrap') %> framework, so they look great on mobile devices.  For a quick demonstration, try resizing your browser window to it's narrowest setting to see how this site looks on an iPhone.</p>
+        <p>I am a diligent worker, and I'm always easy to get ahold of.  I answer my phone, respond to all emails and text messages, and return any missed calls.  I also work quickly and within a budget.  <a href='contact.php'>Contact me</a> for more information!</p>
+      </div>
+    </section>
+  </article>
+  <% include _par/footer %>
+</body>
+</html>

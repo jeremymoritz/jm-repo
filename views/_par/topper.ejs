@@ -1,0 +1,27 @@
+
+<div id='content' class='container'>
+  <nav id='topnav' class='btn-group btn-group-justified hidden-xs' role='navigation'>
+    <% navLinks.forEach(function navButton(n){ %>
+      <a href="<%= n.href %>" title="<%= n.title %>" class="btn btn-purple"><i class="fa fa-<%= n.faIcon %>"></i> <%= n.navText %></a>
+    <% }) %>
+  </nav>
+  </ul>
+
+  <nav class='navbar navbar-fixed-top navbar-inverse visible-xs' role='navigation'>
+    <div class='navbar-header'>
+    <button class='navbar-toggle navbar-brand pull-right' data-toggle='collapse' data-target='#collapse'>
+      <span class='sr-only'>Toggle navigation</span>
+      <i class='fa fa-bars'></i>
+      MENU
+    </button>
+    </div>
+    <div class='collapse navbar-collapse' id='collapse'>
+      <ul class='nav navbar-nav'>
+        <% navLinks.forEach(function navButton(n){ %>
+          <li><a href="<%= n.href %>" title="<%= n.title %>"><i class="fa fa-<%= n.faIcon %>"></i> <%= n.navText %></a></li>
+        <% }) %>
+      </ul>
+    </div>
+  </nav>
+  <div class='inner'>
+    <h1 class='hidden'>Jeremy Moritz - Programmer / Web Developer</h1>

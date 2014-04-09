@@ -1,0 +1,62 @@
+<% include _par/header %>
+<body id="<%= id %>">
+  <% include _par/topper %>
+  <div class='main'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <h2>Contact me using the form below...</h2>
+      </div>
+      <div class='col-md-6'>
+        <p>Please fill out the form below or feel free to call me directly to discuss your development needs.</p>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-sm-6 col-md-5 col-lg-6' id='form'>
+        <% var completedForm = false; %>
+
+        <% if (completedForm) { %>
+          <h3>Thank you for your interest in programming/development services from <em>JeremyMoritz.com</em>!</h3>
+          <h3>You may expect a reply soon.</h3>
+        <% } else { %>
+          <form action='<%= id %>' method='post' role='form'>
+            <div class='row top-buffer'>
+              <div class='col-sm-5 col-md-4 col-lg-3 text-right'><label>Name</label></div>
+              <div class='col-sm-7 col-md-8 col-lg-9'><input type='text' name='name' class='form-control'></div>
+            </div>
+            <div class='row top-buffer'>
+              <div class='col-sm-5 col-md-4 col-lg-3 text-right'><label>Email</label></div>
+              <div class='col-sm-7 col-md-8 col-lg-9'><input type='text' name='email' class='form-control'></div>
+            </div>
+            <div class='row top-buffer text-right'>
+              <div class='col-sm-5 col-md-4 col-lg-3'><label>Phone</label></div>
+              <div class='col-sm-7 col-md-8 col-lg-9'><input type='text' name='phone' class='form-control'></div>
+            </div>
+            <div class='row top-buffer text-right'>
+              <div class='col-sm-5 col-md-4 col-lg-3'><label>Comments or Questions</label></div>
+              <div class='col-sm-7 col-md-8 col-lg-9'><textarea name='comments' rows='6' cols='23' class='form-control'></textarea></div>
+            </div>
+            <div class='row top-buffer'>
+              <div class='col-sm-7 col-md-8 col-lg-9 col-sm-offset-5 col-md-offset-4 col-lg-offset-3'><input type='submit' value='Send' name='submit' class='btn btn-purple form-control'></div>
+            </div>
+          </form>
+        <% } %>
+      </div>
+    </div>
+    <div class='row top-buffer-3'>
+      <div class='col-sm-6 col-md-5 col-lg-6'>
+        <p>5502 Oakview<br>
+          Shawnee, KS 66216<br>
+
+          <% if (isMobile(userAgent)) { %>
+            <script>document.write("<a href=\'"+"te"+"l:+1"+"816"+"86674"+"89\'>(816"+") 8-MO"+"RITZ</a> <span class=\'tiny\'>(86"+"6-7489)</span>");</script>
+          <% } else { %>
+            <script>document.write("<a href=\'"+"cal"+"lto"+"://+1"+"81686"+"67489\'>(8"+"16) 8-MOR"+"ITZ</a> <span class=\'tiny\'>(866-74"+"89)</span>");</script>
+          <% } %>
+        </p>
+        <div class='clearfix'></div>
+      </div>
+    </div>
+  </div>
+  <% include _par/footer %>
+</body>
+</html>
