@@ -12,10 +12,8 @@
     </div>
     <div class='row'>
       <div class='col-sm-6 col-md-5 col-lg-6' id='form'>
-        <% var completedForm = false; %>
-
         <% if (completedForm) { %>
-          <h3>Thank you for your interest in programming/development services from <em>JeremyMoritz.com</em>!</h3>
+          <h3>Thank you, <%= completedForm.name.split(' ')[0] %>, for your interest in software development services from <em>JeremyMoritz.com</em>!</h3>
           <h3>You may expect a reply soon.</h3>
         <% } else { %>
           <form action='<%= id %>' method='post' role='form'>

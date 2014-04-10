@@ -1,7 +1,6 @@
 //  Routing
-var _assign = require('lodash-node').assign;
+var _ = require('lodash-node');
 var jm = require('jeremy-moritz');
-var self = this;
 
 module.exports = {
   index: function index(req, res) {
@@ -11,7 +10,7 @@ module.exports = {
   },
 
   about: function about(req, res) {
-    _assign(jm, {
+    _.assign(jm, {
       id: arguments.callee.name,
       myBirthday: '1981-06-30',
       angelsBirthday: '2004-09-18',
@@ -23,17 +22,16 @@ module.exports = {
   },
 
   examples: function examples(req, res) {
-    var page = arguments.callee.name;
-    _assign(jm, {id: page});
+    jm.id = arguments.callee.name;
 
     res.render(jm.id, jm);
   },
 
   contact: function contact(req, res) {
-    var page = arguments.callee.name;
-    _assign(jm, {
+    _.assign(jm, {
       id: arguments.callee.name,
-      userAgent: req.headers['user-agent']
+      userAgent: req.headers['user-agent'],
+      completedForm: (_.isEmpty(req.body) ? false : req.body)
     });
 
     res.render(jm.id, jm);
